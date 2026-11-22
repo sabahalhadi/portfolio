@@ -14,11 +14,6 @@
   --ko-bg: #FBE6E3;
   --warn: #9A6200;
   --warn-bg: #FCF0D9;
-  --code-bg: #0F1A17;
-  --code-fg: #D5E4DE;
-  --code-key: #7FD1B4;
-  --code-str: #F2C57C;
-  --code-com: #7D9289;
   --font-display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
@@ -38,7 +33,6 @@
   --ko-bg: #3A1D1A;
   --warn: #F2C57C;
   --warn-bg: #3A2D14;
-  --code-bg: #08100E;
   color-scheme: dark;
 }
 
@@ -84,7 +78,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 
 /* ===== Hero ===== */
 .hero { padding-block: 56px 48px; }
-.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 40px; align-items: center; }
 .eyebrow { font-family: var(--font-mono); font-size: 13px; color: var(--accent); letter-spacing: .04em; text-transform: uppercase; margin-bottom: 14px; }
 .hero h1 { font-size: clamp(2.4rem, 6vw, 4rem); letter-spacing: -0.02em; }
 .role { font-family: var(--font-display); font-size: clamp(1.1rem, 2.4vw, 1.4rem); color: var(--muted); margin-top: 10px; font-weight: 500; }
@@ -97,17 +90,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 .btn.ghost { background: transparent; color: var(--accent); }
 .btn:hover { filter: brightness(1.08); }
-
-.code {
-  background: var(--code-bg); color: var(--code-fg); border-radius: 8px;
-  font-family: var(--font-mono); font-size: 13.5px; line-height: 1.75;
-  padding: 18px 20px; overflow-x: auto; border: 1px solid var(--line);
-}
-.code .bar { display: flex; gap: 6px; margin-bottom: 12px; }
-.code .bar i { width: 10px; height: 10px; border-radius: 50%; background: var(--code-com); opacity: .55; }
-.code pre { margin: 0; font: inherit; }
-.k { color: var(--code-key); } .s { color: var(--code-str); } .c { color: var(--code-com); }
-.ok { color: #5FD38D; } .ko { color: #F08A7E; }
 
 /* ===== Sections ===== */
 section { padding-block: 56px; border-top: 1px solid var(--line); }
@@ -239,7 +221,7 @@ h4 { font-size: 1.05rem; margin: 32px 0 14px; }
 
 /* ===== Mobile ===== */
 @media (max-width: 800px) {
-  .hero .wrap, .about, .audit { grid-template-columns: minmax(0, 1fr); }
+  .about, .audit { grid-template-columns: minmax(0, 1fr); }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .report, .audit .report { grid-template-columns: 1fr; gap: 2px; }
   .report dd { margin-bottom: 10px; }
