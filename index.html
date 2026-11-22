@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio de Sabah Alhadi</title>
+  <meta name="description" content="Sabah Alhadi, QA Testeuse Junior à Casablanca : plans de tests, rapports de bugs, tests exploratoires, recette et accessibilité.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== EN-TÊTE ===== -->
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#debut">Sabah Alhadi</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#apropos">À propos</a>
+      <a href="#projets">Projets</a>
+      <a href="#accessibilite">Accessibilité</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Changer de thème">◐</button>
+    </nav>
+  </div>
+</header>
+
+<main id="debut">
+
+  <!-- ===== PRÉSENTATION ===== -->
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Casablanca · Maroc</p>
+        <h1>Sabah Alhadi</h1>
+        <p class="role">QA Testeuse Junior</p>
+        <p class="lead">Je suis intéressée par le testing logiciel et l'amélioration de la qualité des applications. J'ai développé des compétences en tests fonctionnels, rédaction de cas de tests, détection et documentation des anomalies.</p>
+        <div class="actions">
+          <a class="btn" href="#contact">Me contacter</a>
+          <a class="btn ghost" href="#projets">Voir mes projets</a>
+        </div>
+      </div>
+
+      <!-- Carte "exécution de tests" (simple décoration) -->
+      <div class="code" role="img" aria-label="Résumé de la recette du module Avis clients : 20 cas exécutés, 16 conformes, 4 non conformes, 80 % de conformité">
+        <div class="bar"><i></i><i></i><i></i></div>
+<pre><span class="c">// recette — Module Avis clients</span>
+<span class="k">testeuse</span>   : <span class="s">"Sabah Alhadi"</span>
+<span class="k">navigateur</span> : <span class="s">"Google Chrome"</span>
+
+<span class="ok">✓</span> 16 cas conformes
+<span class="ko">✗</span>  4 cas non conformes
+  0 bug bloquant · 2 majeurs · 3 mineurs
+
+<span class="k">conformité</span> : <span class="s">80 %</span>
+<span class="k">durée</span>      : <span class="s">7h30</span></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== À PROPOS ===== -->
+  <section id="apropos">
+    <div class="wrap">
+      <div class="sec-head"><h2>À propos</h2><span>mon parcours</span></div>
+      <div class="about">
+        <div>
+          <p>J'ai commencé mon parcours professionnel dans l'analyse de données chez Facepoint, en tant qu'éditrice de données. Cette expérience m'a permis de développer mon sens de l'analyse.</p>
+          <p>Avec le temps, j'ai découvert le domaine du QA Testing et j'ai décidé de m'orienter vers ce métier, qui correspond à mon intérêt pour l'analyse, la recherche d'anomalies et l'amélioration de la qualité des applications.</p>
+          <p>Dans le cadre de ma reconversion, j'ai travaillé sur plusieurs exercices pratiques : tests fonctionnels, rédaction de cas de tests, rapports de bugs, tests API, tests de performance et accessibilité.</p>
+          <p>Ce qui me motive dans le testing, c'est de comprendre comment une application fonctionne, identifier les problèmes et contribuer à offrir une meilleure expérience aux utilisateurs.</p>
+          <p>Aujourd'hui, je souhaite continuer à apprendre, développer mes compétences et évoluer en tant que QA Junior.</p>
+        </div>
+        <dl class="facts">
+          <div><dt>Objectif</dt><dd>Poste de QA Testeuse Junior</dd></div>
+          <div><dt>Expérience</dt><dd>Éditrice de données — Facepoint</dd></div>
+          <div><dt>Compétences</dt><dd>
+            <ul class="tags">
+              <li>Tests fonctionnels</li><li>Cas de tests</li><li>Rapports de bugs</li>
+              <li>Tests exploratoires</li><li>Tests API</li><li>Tests de performance</li>
+              <li>Accessibilité</li><li>Lighthouse</li>
+            </ul>
+          </dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJETS ===== -->
+  <section id="projets">
+    <div class="wrap">
+      <div class="sec-head"><h2>Les projets de test</h2><span>application ShopTest</span></div>
+
+      <!-- Onglets -->
+      <div class="tabs" role="tablist" aria-label="Projets de test">
+        <button class="tab" role="tab" aria-selected="true"  aria-controls="p-plan"     id="t-plan">Plan de tests</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p-bugs"     id="t-bugs" tabindex="-1">Rapports de bugs</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p-explo"    id="t-explo" tabindex="-1">Test exploratoire</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p-recette"  id="t-recette" tabindex="-1">Rapport de recette</button>
+      </div>
+
+      <!-- 1. Plan de tests -->
+      <div class="panel" role="tabpanel" id="p-plan" aria-labelledby="t-plan">
+        <h3>Plan de tests — Recherche produit</h3>
+        <p class="muted">Plan de tests exécuté pour la fonctionnalité de recherche produit de ShopTest.</p>
+
+        <div class="filters" aria-label="Filtrer par statut">
+          <button class="chip active" data-filter="all">Tous (6)</button>
+          <button class="chip" data-filter="OK">OK (4)</button>
+          <button class="chip" data-filter="KO">KO (2)</button>
+        </div>
+
+        <div class="table-scroll">
+          <table class="tbl" id="planTable">
+            <thead>
+              <tr><th>ID</th><th>Intitulé</th><th>Préconditions</th><th>Étapes</th><th>Résultat attendu</th><th>Résultat obtenu</th><th>Statut</th></tr>
+            </thead>
+            <tbody>
+              <tr data-status="OK">
+                <td class="mono">CT-RP-01</td><td>Recherche par mot-clé exact</td><td>Être sur la page d'accueil</td>
+                <td>1. Saisir « chaussures » dans la barre de recherche<br>2. Appuyer sur Entrée</td>
+                <td>Affichage de produits contenant « chaussures » dans le titre ou la description</td>
+                <td>Les résultats affichés contiennent bien le mot « chaussures » dans le titre ou la description</td>
+                <td><span class="badge ok">OK</span></td>
+              </tr>
+              <tr data-status="KO">
+                <td class="mono">CT-RP-02</td><td>Recherche avec filtre de prix</td><td>Avoir effectué une recherche avec résultats</td>
+                <td>1. Rechercher « veste »<br>2. Appliquer le filtre Prix : 20 € – 80 €<br>3. Valider le filtre</td>
+                <td>Seuls les produits entre 20 € et 80 € sont affichés</td>
+                <td>Après application du filtre 20 € – 80 €, un produit à 85 € apparaît encore dans les résultats</td>
+                <td><span class="badge ko">KO</span></td>
+              </tr>
+              <tr data-status="OK">
+                <td class="mono">CT-RP-03</td><td>Recherche avec mot-clé inexistant</td><td>Être sur la page d'accueil</td>
+                <td>1. Saisir « xqzwf » dans la barre de recherche<br>2. Appuyer sur Entrée</td>
+                <td>Message « Aucun résultat trouvé » affiché, aucun produit listé</td>
+                <td>Le message « Aucun résultat trouvé » s'affiche et aucun produit n'est affiché</td>
+                <td><span class="badge ok">OK</span></td>
+              </tr>
+              <tr data-status="OK">
+                <td class="mono">CT-RP-04</td><td>Recherche avec champ vide</td><td>Être sur la page d'accueil</td>
+                <td>1. Laisser le champ de recherche vide<br>2. Appuyer sur Entrée ou cliquer sur la loupe</td>
+                <td>L'application ne plante pas et affiche un message d'aide ou tous les produits</td>
+                <td>Tous les produits s'affichent après avoir cliqué sur la loupe avec le champ de recherche vide</td>
+                <td><span class="badge ok">OK</span></td>
+              </tr>
+              <tr data-status="OK">
+                <td class="mono">CT-RP-05</td><td>Tri des résultats par prix croissant</td><td>Avoir des résultats de recherche affichés</td>
+                <td>1. Rechercher « sac »<br>2. Sélectionner le tri « Prix croissant »</td>
+                <td>Les produits sont réordonnés du moins cher au plus cher</td>
+                <td>Les produits sont affichés du prix le plus bas au prix le plus élevé</td>
+                <td><span class="badge ok">OK</span></td>
+              </tr>
+              <tr data-status="KO">
+                <td class="mono">CT-RP-06</td><td>Résultats paginés</td><td>Recherche retournant plus de 20 produits</td>
+                <td>1. Rechercher un mot-clé courant (ex. « t-shirt »)<br>2. Défiler jusqu'en bas de page<br>3. Cliquer sur « Page suivante »</td>
+                <td>La page 2 des résultats s'affiche avec de nouveaux produits</td>
+                <td>La page 2 s'affiche, mais certains produits de la page 1 apparaissent encore</td>
+                <td><span class="badge ko">KO</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 2. Rapports de bugs -->
+      <div class="panel" role="tabpanel" id="p-bugs" aria-labelledby="t-bugs" hidden>
+        <h3>Rapports de bugs</h3>
+        <p class="muted">Cliquez sur une anomalie pour voir le rapport complet.</p>
+
+        <details class="bug" open>
+          <summary>
+            <span class="mono">Anomalie 1</span>
+            <span class="bug-title">Page de résultats de recherche — les valeurs du filtre de prix restent affichées après réinitialisation</span>
+            <span class="badge minor">Mineur</span>
+          </summary>
+          <p class="context">Après avoir appliqué un filtre de prix (ex. 20 €–80 €), si l'on clique sur « Réinitialiser les filtres », les produits hors fourchette réapparaissent bien — mais le champ de saisie du filtre affiche encore les valeurs précédemment saisies (20 et 80).</p>
+          <dl class="report">
+            <dt>Environnement</dt><dd>Google Chrome</dd>
+            <dt>Préconditions</dt><dd><ul><li>Être sur la page de résultats de recherche</li><li>Des produits sont affichés</li><li>Le filtre de prix est disponible</li></ul></dd>
+            <dt>Étapes de reproduction</dt><dd><ol><li>Effectuer une recherche produit</li><li>Saisir 20 € comme prix minimum et 80 € comme prix maximum</li><li>Appliquer le filtre de prix</li><li>Cliquer sur « Réinitialiser les filtres »</li></ol></dd>
+            <dt>Résultat obtenu</dt><dd>Les produits hors de la fourchette 20 €–80 € réapparaissent, mais les champs du filtre affichent toujours 20 et 80.</dd>
+            <dt>Résultat attendu</dt><dd>Après avoir cliqué sur « Réinitialiser les filtres », les résultats doivent être réinitialisés et les champs du filtre de prix doivent également être vides.</dd>
+            <dt>Sévérité</dt><dd>Mineur</dd>
+            <dt>Pièces jointes</dt><dd>Capture d'écran montrant les résultats réinitialisés avec les valeurs 20 et 80 toujours présentes dans les champs du filtre.</dd>
+          </dl>
+        </details>
+
+        <details class="bug">
+          <summary>
+            <span class="mono">Anomalie 2</span>
+            <span class="bug-title">Fiche produit — le bouton « Ajouter au panier » reste actif lorsque le produit est en rupture de stock</span>
+            <span class="badge minor">Mineur</span>
+          </summary>
+          <p class="context">Sur la fiche produit, le bouton « Ajouter au panier » reste actif (cliquable) même quand la quantité en stock est 0 et que le badge « Rupture de stock » est affiché. Un clic sur ce bouton ne produit aucune action visible et aucun message d'erreur n'est affiché.</p>
+          <dl class="report">
+            <dt>Environnement</dt><dd>Google Chrome</dd>
+            <dt>Préconditions</dt><dd><ul><li>Être sur la fiche d'un produit dont la quantité en stock est 0</li><li>Le produit affiche le badge « Rupture de stock »</li><li>Le bouton « Ajouter au panier » reste actif</li></ul></dd>
+            <dt>Étapes de reproduction</dt><dd><ol><li>Ouvrir la fiche d'un produit en rupture de stock</li><li>Vérifier que la quantité disponible est 0</li><li>Vérifier que le badge « Rupture de stock » est affiché</li><li>Cliquer sur le bouton « Ajouter au panier »</li></ol></dd>
+            <dt>Résultat obtenu</dt><dd>Le bouton « Ajouter au panier » reste cliquable alors que le produit est en rupture de stock. Après le clic, aucune action visible et aucun message d'erreur ne sont affichés.</dd>
+            <dt>Résultat attendu</dt><dd>Lorsque le stock est à 0, le bouton « Ajouter au panier » devrait être désactivé ou non cliquable, et un message doit indiquer que le produit est indisponible.</dd>
+            <dt>Sévérité</dt><dd>Mineur</dd>
+            <dt>Pièces jointes</dt><dd>Capture d'écran de la fiche produit montrant le badge « Rupture de stock » et le bouton « Ajouter au panier » toujours actif.</dd>
+          </dl>
+        </details>
+
+        <details class="bug">
+          <summary>
+            <span class="mono">Anomalie 3</span>
+            <span class="bug-title">Création de compte — erreur 500 lors de la soumission d'un mot de passe contenant un caractère spécial</span>
+            <span class="badge major">Majeur</span>
+          </summary>
+          <p class="context">Lors de la création d'un compte, si le mot de passe saisi contient un caractère spécial (ex. « &amp; » ou « # »), la validation côté client accepte le formulaire, mais la soumission retourne une erreur 500 sans message explicatif pour l'utilisateur.</p>
+          <dl class="report">
+            <dt>Environnement</dt><dd>Google Chrome</dd>
+            <dt>Préconditions</dt><dd><ul><li>Être sur la page « Créer un compte »</li><li>Utiliser une adresse e-mail non encore utilisée</li></ul></dd>
+            <dt>Étapes de reproduction</dt><dd><ol><li>Ouvrir la page « Créer un compte »</li><li>Remplir les champs obligatoires avec des données valides</li><li>Saisir un mot de passe contenant un caractère spécial</li><li>Cliquer sur « Créer un compte »</li></ol></dd>
+            <dt>Résultat obtenu</dt><dd>Le formulaire est accepté par la validation côté client, mais la soumission retourne une erreur 500. Aucun message explicatif n'est affiché à l'utilisateur.</dd>
+            <dt>Résultat attendu</dt><dd>Le compte doit être créé correctement si les caractères spéciaux sont autorisés. S'ils ne sont pas autorisés, un message clair doit être affiché à l'utilisateur.</dd>
+            <dt>Sévérité</dt><dd>Majeur</dd>
+            <dt>Pièces jointes</dt><dd>Capture d'écran montrant l'erreur 500 après la création du compte.</dd>
+          </dl>
+        </details>
+      </div>
+
+      <!-- 3. Journal exploratoire -->
+      <div class="panel" role="tabpanel" id="p-explo" aria-labelledby="t-explo" hidden>
+        <h3>Journal de test exploratoire — Page panier</h3>
+        <p class="muted">Session exploratoire de 40 minutes sur la page panier de ShopTest. 3 bugs trouvés.</p>
+        <ol class="timeline">
+          <li><span class="time">+0 min</span><div><b>Ouvrir le panier avec un produit</b><p>Le produit, la quantité et le prix sont bien affichés.</p></div><span class="badge ok">Pas de bug</span></li>
+          <li class="is-bug"><span class="time">+5 min</span><div><b>Saisir une quantité -1</b><p>La quantité négative est acceptée.</p></div><span class="badge ko">Bug</span></li>
+          <li class="is-bug"><span class="time">+10 min</span><div><b>Saisir une quantité 1,5</b><p>La quantité décimale est acceptée.</p></div><span class="badge ko">Bug</span></li>
+          <li><span class="time">+15 min</span><div><b>Cliquer sur « Vider le panier »</b><p>Tous les produits sont supprimés et le panier devient vide.</p></div><span class="badge ok">Pas de bug</span></li>
+          <li><span class="time">+20 min</span><div><b>Vérifier le total final</b><p>Le total correspond aux produits présents dans le panier.</p></div><span class="badge ok">Pas de bug</span></li>
+          <li><span class="time">+25 min</span><div><b>Utiliser le bouton retour du navigateur</b><p>La page précédente s'affiche.</p></div><span class="badge ok">Pas de bug</span></li>
+          <li class="is-bug"><span class="time">+30 min</span><div><b>Entrer un code promo invalide</b><p>Aucun message n'indique que le code promo est invalide.</p></div><span class="badge ko">Bug</span></li>
+          <li><span class="time">+35 min</span><div><b>Vérifier l'affichage sur mobile</b><p>L'affichage est correct sur mobile.</p></div><span class="badge ok">Pas de bug</span></li>
+          <li><span class="time">+40 min</span><div><b>Modifier la quantité de 1 à 2</b><p>Le total se met à jour automatiquement.</p></div><span class="badge ok">Pas de bug</span></li>
+        </ol>
+      </div>
+
+      <!-- 4. Rapport de recette -->
+      <div class="panel" role="tabpanel" id="p-recette" aria-labelledby="t-recette" hidden>
+        <h3>Rapport de recette final — Module Avis clients</h3>
+
+        <dl class="facts facts-row">
+          <div><dt>Testeuse</dt><dd>Sabah Alhadi</dd></div>
+          <div><dt>Date de la recette</dt><dd>17/09/2026</dd></div>
+          <div><dt>Environnement</dt><dd>Google Chrome</dd></div>
+          <div><dt>Durée totale</dt><dd>7h30</dd></div>
+        </dl>
+
+        <h4>Tableau de bord</h4>
+        <div class="stats">
+          <div class="stat"><b>20</b><span>cas exécutés</span></div>
+          <div class="stat"><b class="ok-t">16</b><span>conformes ✓</span></div>
+          <div class="stat"><b class="ko-t">4</b><span>non conformes ✗</span></div>
+          <div class="stat"><b>0</b><span>non applicables</span></div>
+        </div>
+        <div class="meter" aria-label="Taux de conformité : 80 %">
+          <div class="meter-fill" style="width:80%"></div>
+        </div>
+        <p class="meter-label">Taux de conformité : <b>80 %</b></p>
+
+        <div class="stats">
+          <div class="stat"><b>0</b><span>bug bloquant</span></div>
+          <div class="stat"><b class="ko-t">2</b><span>bugs majeurs</span></div>
+          <div class="stat"><b>3</b><span>bugs mineurs / cosmétiques</span></div>
+          <div class="stat"><b>2</b><span>bugs trouvés en exploratoire</span></div>
+        </div>
+
+        <h4>Synthèse des anomalies</h4>
+        <div class="table-scroll">
+          <table class="tbl">
+            <thead><tr><th>ID Bug</th><th>Titre court</th><th>Règle RF</th><th>Sévérité</th><th>Statut</th></tr></thead>
+            <tbody>
+              <tr><td class="mono">BUG-01</td><td>Un commentaire de 8 caractères est accepté</td><td class="mono">RF-04</td><td><span class="badge minor">Mineur</span></td><td>Ouvert</td></tr>
+              <tr><td class="mono">BUG-02</td><td>Une note décimale de 1,5 est acceptée</td><td class="mono">RF-05</td><td><span class="badge major">Majeur</span></td><td>Ouvert</td></tr>
+              <tr><td class="mono">BUG-03</td><td>Création de 2 avis client après un double-clic sur « Envoyer »</td><td class="mono">RF-02</td><td><span class="badge minor">Mineur</span></td><td>Ouvert</td></tr>
+              <tr><td class="mono">BUG-04</td><td>Un utilisateur peut supprimer un avis approuvé</td><td class="mono">RF-11</td><td><span class="badge major">Majeur</span></td><td>Ouvert</td></tr>
+              <tr><td class="mono">BUG-05</td><td>Un commentaire de 501 caractères est accepté</td><td class="mono">RF-04</td><td><span class="badge minor">Mineur</span></td><td>Ouvert</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4>Avis de recette</h4>
+        <!-- Pour choisir ta décision : ajoute la classe "choisi" sur la bonne ligne (une seule). -->
+        <ul class="decisions">
+          <li><b>✅ GO pour la mise en production</b><span>Aucun bug bloquant ou majeur ouvert</span></li>
+          <li><b>⚠️ GO conditionnel</b><span>Bugs majeurs ouverts mais contournables — accord de l'équipe requis</span></li>
+          <li><b>🚫 NO GO</b><span>Bug(s) bloquant(s) non corrigé(s)</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACCESSIBILITÉ ===== -->
+  <section id="accessibilite">
+    <div class="wrap">
+      <div class="sec-head"><h2>Audit d'accessibilité</h2><span>ebay.fr · Lighthouse</span></div>
+      <div class="audit">
+        <div>
+          <div class="score">
+            <div class="ring"><span>94</span></div>
+            <div>
+              <p class="muted small">Score d'accessibilité</p>
+              <p><b>94 / 100</b> — sévérité mineure</p>
+            </div>
+          </div>
+          <dl class="report">
+            <dt>Page testée</dt><dd><a href="https://www.ebay.fr/" target="_blank" rel="noopener">https://www.ebay.fr/</a></dd>
+            <dt>Outil utilisé</dt><dd>Lighthouse</dd>
+            <dt>Anomalie</dt><dd>Éléments interactifs dans un élément <code>aria-hidden="true"</code></dd>
+            <dt>Description</dt><dd>Le rapport signale la présence d'éléments interactifs à l'intérieur d'un élément masqué aux technologies d'assistance avec <code>aria-hidden="true"</code>.</dd>
+            <dt>Impact utilisateur</dt><dd>Les utilisateurs de lecteurs d'écran peuvent ne pas pouvoir accéder correctement à certains éléments interactifs.</dd>
+            <dt>Commentaires</dt><dd>Le score Lighthouse est de 94/100, mais quelques problèmes d'accessibilité restent à corriger, notamment les éléments interactifs masqués aux lecteurs d'écran.</dd>
+          </dl>
+        </div>
+        <div class="shots">
+          <a href="images/lighthouse-score.png" target="_blank"><img src="images/lighthouse-score.png" alt="Rapport Lighthouse d'ebay.fr : score d'accessibilité de 94, anomalie ARIA sur des éléments aria-hidden contenant des descendants sélectionnables" loading="lazy"></a>
+          <a href="images/lighthouse-details.png" target="_blank"><img src="images/lighthouse-details.png" alt="Suite du rapport Lighthouse : le document ne contient pas de repère principal" loading="lazy"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RÉFLEXIONS ===== -->
+  <section id="reflexions">
+    <div class="wrap">
+      <div class="sec-head"><h2>Réflexions sur la méthode</h2><span>ce que j'ai appris</span></div>
+      <blockquote class="quote">
+        Pendant mes tests, j'ai compris qu'il est important de préparer les cas de test à partir des critères d'acceptation et de vérifier aussi les cas d'erreur. Pour améliorer ma méthode, je souhaite mieux prioriser les tests et rédiger des rapports d'anomalies plus précis.
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="sec-head"><h2>Contact</h2><span>Casablanca, Maroc</span></div>
+      <div class="contact">
+        <a class="contact-card" href="mailto:sabahalhadi07@gmail.com">
+          <span class="muted small">E-mail</span><b>sabahalhadi07@gmail.com</b>
+        </a>
+        <a class="contact-card" href="tel:+212635941318">
+          <span class="muted small">Téléphone</span><b>06 35 94 13 18</b>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">© <span id="year"></span> Sabah Alhadi</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
